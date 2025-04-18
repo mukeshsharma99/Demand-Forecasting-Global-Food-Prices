@@ -3,7 +3,7 @@
 
 Column Name | Description
 
-adm0_id | ID for the country (admin level 0).
+ adm0_id | ID for the country (admin level 0).
 adm0_name | Name of the country (e.g., "Kenya", "Bangladesh").
 adm1_id | ID for the region/province/state within the country (admin level 1).
 adm1_name | Name of that region/province/state (e.g., "Nairobi", "Punjab"). Some are missing.
