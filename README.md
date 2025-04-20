@@ -1,24 +1,67 @@
-📊 Dataset Description — WFP Food Prices Database
-This dataset, sourced from the World Food Programme, contains historical food price data collected across various countries, regions, and markets. It is used to analyze and forecast demand trends for essential commodities.
+# Inventory Demand Forecasting
 
-🧾 Column Descriptions
+## Project Overview
+This project aims to forecast inventory demand using machine learning to help businesses manage stock effectively and reduce costs. By utilizing historical sales data and predictive models, the goal is to optimize inventory levels, minimizing overstock or stockout situations.
 
-Column Name	Description
-adm0_id	Unique identifier for the country (Admin Level 0).
-adm0_name	Name of the country (e.g., Kenya, Bangladesh).
-adm1_id	Unique identifier for the region/province/state within the country (Admin Level 1).
-adm1_name	Name of the region/province/state (e.g., Nairobi, Punjab). Some values may be missing.
-mkt_id	Unique identifier for the market where the price was recorded.
-mkt_name	Name of the specific market (e.g., Accra Central, Lusaka Main).
-cm_id	Unique identifier for the food commodity.
-cm_name	Name of the food commodity (e.g., Maize, Rice, Beans).
-cur_id	Unique identifier for the currency used.
-cur_name	Name of the currency (e.g., Kenyan Shilling, USD).
-pt_id	Unique identifier for the price type.
-pt_name	Type of price — e.g., Retail, Wholesale, or Consumer Price.
-um_id	Unique identifier for the unit of measurement.
-um_name	The measurement unit used (e.g., kg, litre, dozen).
-mp_month	Month the price was recorded (1 = January, 12 = December).
-mp_year	Year the price was recorded (e.g., 2022).
-mp_price	Price of the commodity in the local currency.
-mp_commoditysource	Intended to be the data source for the commodity, but this column is empty in the dataset
+## Dataset
+The dataset includes:
+- **Product_Code**: Product identifier.
+- **Warehouse**: Location of the product.
+- **Product_Category**: Product category.
+- **Date/Week**: Date or week of recorded demand.
+- **Sales/Demand**: Sales or demand value.
+
+## Preprocessing Steps
+- **Missing Value Treatment**: Impute or remove missing values.
+- **Outlier Handling**: Detect and manage outliers.
+- **Categorical Encoding**: Use Label or One-Hot Encoding for categorical features.
+- **Feature Engineering**: Extract week/month from Date for seasonality patterns.
+
+## Exploratory Data Analysis (EDA)
+- **Demand Trends**: Visualize demand over time.
+- **Demand per Product/Warehouse**: Identify top-demand products and locations.
+- **Seasonality Patterns**: Detect cyclical demand variations.
+- **Correlation**: Analyze relationships between features and demand.
+
+## Machine Learning Models
+- **Linear Regression**
+- **Decision Tree Regressor**
+- **Random Forest Regressor**
+- **XGBoost Regressor**
+
+## Evaluation Metrics
+Models evaluated using:
+- **RMSE** (Root Mean Squared Error)
+- **MAE** (Mean Absolute Error)
+- **R² Score**
+
+## Insights & Results
+- Feature importance analysis.
+- Comparison of model performance.
+- Best model (likely XGBoost or Random Forest) selected for demand forecasting.
+
+## Forecasting
+The best model is used to predict future inventory demand. Forecasted data is saved in `forecasted_demand.csv` for planning/logistics.
+
+## Fine-Tuning
+Models are fine-tuned using techniques like GridSearchCV or RandomizedSearchCV to improve performance.
+
+## Usage
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/inventory-demand-forecasting.git
+    ```
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Run the Jupyter notebook `inventory_forecasting.ipynb` to preprocess data, train models, and evaluate performance.
+4. Use the trained model to forecast demand.
+
+## License
+MIT License
+
+## Acknowledgements
+- Dataset from Kaggle or similar
+- Libraries: Pandas, Scikit-learn, XGBoost, Matplotlib, Seaborn
+
