@@ -1,7 +1,7 @@
 # Demand Forecasting Global Food Prices
 
 ## Project Overview
-This project aims to forecast inventory demand using machine learning to help businesses manage stock effectively and reduce costs. The project also incorporates **Global Food Prices** data to enhance demand prediction by considering the impact of food price fluctuations on product demand. By utilizing historical sales data and predictive models, the goal is to optimize inventory levels, minimizing overstock or stockout situations.
+This project aims to forecast inventory demand using machine learning to help businesses manage stock effectively and reduce costs. The project also incorporates **Global Food Prices** data to enhance demand prediction by considering the impact of food price fluctuations on product demand. By utilizing historical sales data and predictive models, the goal is to optimize inventory levels, minimizing overstock or stockout situations.   
 
 ## Dataset
 The dataset includes:
