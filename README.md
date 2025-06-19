@@ -6,7 +6,7 @@ This project aims to forecast inventory demand using machine learning to help bu
 ## Dataset
 The dataset includes:
 - **Product_Code**: Product identifier.
-- **Warehouse**: Location of the product.
+- **Warehouse**: Location of the product. 
 - **Product_Category**: Product category.
 - **Date/Week**: Date or week of recorded demand.
 - **Sales/Demand**: Sales or demand value.
